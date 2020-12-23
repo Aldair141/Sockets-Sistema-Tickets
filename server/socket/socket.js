@@ -5,7 +5,7 @@ let ticketControl = new TicketControl();
 
 io.on('connection', (client) => {
     //Emitimos el último ticket
-    client.broadcast.emit('ultimoTicket', {
+    client.emit('ultimoTicket', {
         ultimo: ticketControl.getUltimoTicket()
     });
 
@@ -17,6 +17,11 @@ io.on('connection', (client) => {
     client.on('generarTicket', (data, callback) => {
         let rpta = ticketControl.generarTicket();
         callback(rpta);
+
+        //Emitimos el último ticket
+        client.broadcast.emit('ultimoTicket', {
+            ultimo: ticketControl.getUltimoTicket()
+        });
     });
 
     client.on('atenderTicket', (_escritorio, callback) => {

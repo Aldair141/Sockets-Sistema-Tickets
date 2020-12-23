@@ -16,6 +16,7 @@ var lblEscritorios = [lblEscritorio1, lblEscritorio2, lblEscritorio3, lblEscrito
 var audio = document.getElementById("audio");
 
 socket.on('cuatroultimos', function(data) {
+    audio.src = "./audio/new-ticket.mp3";
     audio.play();
     imprimirTickets(data.cuatroultimos);
 });
