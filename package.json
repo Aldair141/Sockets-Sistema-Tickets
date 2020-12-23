@@ -1,15 +1,16 @@
 {
-  "name": "09-socket-aplicacion-ticket-test",
-  "version": "1.0.0",
-  "description": "Esta es mi tarea del sistema de recepción de tickets",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Juan Aldair",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^3.0.4"
-  }
+    "name": "09-socket-aplicacion-ticket-test",
+    "version": "1.0.0",
+    "description": "Esta es mi tarea del sistema de recepción de tickets",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Juan Aldair",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "socket.io": "^3.0.4"
+    }
 }
