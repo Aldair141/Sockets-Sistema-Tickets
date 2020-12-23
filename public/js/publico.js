@@ -13,7 +13,10 @@ var lblEscritorio4 = $("#lblEscritorio4");
 var lblTickets = [lblTicket1, lblTicket2, lblTicket3, lblTicket4];
 var lblEscritorios = [lblEscritorio1, lblEscritorio2, lblEscritorio3, lblEscritorio4];
 
+var audio = document.getElementById("audio");
+
 socket.on('cuatroultimos', function(data) {
+    audio.play();
     imprimirTickets(data.cuatroultimos);
 });
 
